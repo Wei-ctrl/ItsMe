@@ -1,12 +1,12 @@
 :root {
-  --blue: #0c8fe6;
-  --navy: #1c2a35;
+  --black: #000;
+  --band: #f0f0f0;
   --ink: #111;
   --muted: #555;
   --paper: #fff;
-  --sketch: #4a5560;
-  --sketch-fill: #c9dbe6;
-  --rust: #c8694a;
+  --sketch: #222;
+  --sketch-fill: #d6d6d6;
+  --rust: #000;
   --display: "Jost", "Futura", "Trebuchet MS", sans-serif;
   --body: "Poppins", system-ui, sans-serif;
 }
@@ -26,7 +26,7 @@ a { color: inherit; }
 
 /* Hero */
 .hero {
-  background: var(--blue);
+  background: var(--black);
   color: #fff;
   padding: 0 clamp(16px, 6vw, 48px) clamp(56px, 9vw, 72px);
 }
@@ -62,7 +62,7 @@ a { color: inherit; }
 /* Overlay menu */
 .menu {
   position: fixed; inset: 0; z-index: 10;
-  background: var(--blue);
+  background: var(--black);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem;
   opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
 }
@@ -73,8 +73,8 @@ a { color: inherit; }
 
 /* Work carousel */
 .work {
-  background: var(--navy);
-  color: #fff;
+  background: var(--band);
+  color: var(--ink);
   padding: 80px 0 64px;
   text-align: center;
 }
@@ -93,14 +93,15 @@ a { color: inherit; }
 }
 .thumb { aspect-ratio: 3 / 2; display: grid; place-items: center; }
 .thumb svg { width: 100%; height: 100%; }
-.thumb svg * { fill: none; stroke: #2c3a45; stroke-width: 3; }
+.thumb svg * { fill: none; stroke: #111; stroke-width: 3; }
 .thumb svg .hi { fill: #fff; }
-.thumb svg text { fill: #2c3a45; stroke: none; font: 600 22px var(--body); }
-.t1 { background: #f6d58e; }
-.t2 { background: #a9d8c8; }
-.t3 { background: #f2b8a2; }
-.t4 { background: #b9c7f2; }
-.t5 { background: #e2d2f5; }
+.thumb svg text { fill: #111; stroke: none; font: 600 22px var(--body); }
+.thumb { border: 2px solid #111; }
+.t1 { background: #fff; }
+.t2 { background: #e2e2e2; }
+.t3 { background: #c8c8c8; }
+.t4 { background: #e2e2e2; }
+.t5 { background: #fff; }
 .slide h3 {
   font-family: var(--display); font-weight: 400; font-size: 1.4rem; line-height: 1.35;
   margin: 1.2rem 0 .6rem;
@@ -110,20 +111,20 @@ a { color: inherit; }
 .arrow {
   position: absolute; top: calc((min(325px, 82vw) * 2 / 3) / 2); transform: translateY(-50%); z-index: 2;
   width: 84px; height: 84px; border-radius: 50%; border: 0; cursor: pointer;
-  background: rgb(12 143 230 / .75); color: #fff; font-size: 2.2rem;
+  background: rgb(0 0 0 / .8); color: #fff; font-size: 2.2rem;
   transition: background .2s;
 }
-.arrow:hover { background: var(--blue); }
+.arrow:hover { background: var(--black); }
 .prev { left: 16px; }
 .next { right: 16px; }
 .count { font-size: .9rem; opacity: .7; margin: 2rem 0 .5rem; }
 .all {
   display: inline-block;
   font-family: var(--display); font-size: 1.15rem;
-  border: 2px solid #fff; padding: .6rem 1.6rem; text-decoration: none;
+  border: 2px solid var(--ink); padding: .6rem 1.6rem; text-decoration: none;
   transition: background .2s, color .2s;
 }
-.all:hover { background: #fff; color: var(--navy); }
+.all:hover { background: var(--ink); color: #fff; }
 
 /* How I work */
 .how {
@@ -150,10 +151,10 @@ figure { margin: 3.5rem 0 1.2rem; }
 h2 { font-family: var(--display); font-weight: 500; font-size: 1.9rem; margin: 0 0 1rem; }
 .more ul { list-style: none; padding: 0; margin: 0; }
 .more li { margin: .4rem 0; }
-.more a { color: var(--blue); text-underline-offset: 4px; }
+.more a { color: var(--ink); text-underline-offset: 4px; }
 
 footer {
-  background: var(--navy); color: #fff; opacity: .95;
+  background: var(--black); color: #fff;
   text-align: center; padding: 2.2rem 1rem; margin-top: 4rem;
   font-family: var(--display);
 }
