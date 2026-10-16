@@ -4,58 +4,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>It's Me</title>
-  <meta name="description" content="Personal site of Wei">
+  <meta name="description" content="Personal site of Wei — student, builder, and curious learner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#top">It's Me</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
-    </nav>
+  <header class="hero" id="top">
+    <div class="bar">
+      <a class="name" href="#top">Wei</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <p class="statement">I am a student, web builder, and curious learner who makes small apps that help people learn.</p>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">Hi, it's me —</p>
-      <h1>Wei</h1>
-      <p class="tagline">Student, builder, and curious learner. I make small web apps for learning and fun.</p>
-      <a class="btn" href="#projects">See my work</a>
-    </section>
+  <nav class="menu" id="menu" aria-hidden="true">
+    <a href="#work">Work</a>
+    <a href="#how">How I work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Write a few sentences about yourself here: what you study, what you enjoy building, and what you're learning next.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Math Quiz</h3>
-          <p>An interactive quiz app for practicing math.</p>
+  <section class="work" id="work">
+    <div class="carousel">
+      <button class="arrow prev" aria-label="Previous project">&larr;</button>
+      <div class="track" id="track">
+        <article class="slide">
+          <div class="thumb t1" aria-hidden="true">
+            <svg viewBox="0 0 200 120"><text x="20" y="55">7 × 8 = ?</text><rect x="20" y="72" width="70" height="26" rx="6"/><rect x="100" y="72" width="70" height="26" rx="6" class="hi"/></svg>
+          </div>
+          <h3>Math Quiz — practice that feels like a game</h3>
+          <a href="https://github.com/Wei-ctrl">See details</a>
         </article>
-        <article class="card">
-          <h3>StudyLingo</h3>
-          <p>A language-learning study helper.</p>
+        <article class="slide">
+          <div class="thumb t2" aria-hidden="true">
+            <svg viewBox="0 0 200 120"><rect x="25" y="25" width="70" height="70" rx="10"/><rect x="105" y="25" width="70" height="70" rx="10" class="hi"/><text x="42" y="68">hola</text><text x="118" y="68">hello</text></svg>
+          </div>
+          <h3>StudyLingo — a language-learning study helper</h3>
+          <a href="https://github.com/Wei-ctrl">See details</a>
         </article>
-        <article class="card">
-          <h3>Poetry Cloze</h3>
-          <p>Fill-in-the-blank practice with classic poems.</p>
+        <article class="slide">
+          <div class="thumb t3" aria-hidden="true">
+            <svg viewBox="0 0 200 120"><line x1="20" y1="35" x2="180" y2="35"/><line x1="20" y1="60" x2="80" y2="60"/><rect x="88" y="48" width="50" height="20" rx="4" class="hi"/><line x1="146" y1="60" x2="180" y2="60"/><line x1="20" y1="85" x2="150" y2="85"/></svg>
+          </div>
+          <h3>Poetry Cloze — fill in the missing words of classic poems</h3>
+          <a href="https://github.com/Wei-ctrl">See details</a>
         </article>
-        <article class="card">
-          <h3>Voting App</h3>
-          <p>A simple real-time voting app backed by Supabase.</p>
+        <article class="slide">
+          <div class="thumb t4" aria-hidden="true">
+            <svg viewBox="0 0 200 120"><rect x="30" y="70" width="30" height="30"/><rect x="75" y="35" width="30" height="65" class="hi"/><rect x="120" y="55" width="30" height="45"/><line x1="20" y1="100" x2="180" y2="100"/></svg>
+          </div>
+          <h3>Voting App — real-time polls backed by Supabase</h3>
+          <a href="https://github.com/Wei-ctrl">See details</a>
+        </article>
+        <article class="slide">
+          <div class="thumb t5" aria-hidden="true">
+            <svg viewBox="0 0 200 120"><circle cx="60" cy="60" r="10" class="hi"/><circle cx="60" cy="60" r="30"/><path d="M100 90 Q120 20 170 40"/><circle cx="170" cy="40" r="6"/></svg>
+          </div>
+          <h3>Physics AoPS — problem practice for physics</h3>
+          <a href="https://github.com/Wei-ctrl">See details</a>
         </article>
       </div>
+      <button class="arrow next" aria-label="Next project">&rarr;</button>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <a class="all" href="https://github.com/Wei-ctrl?tab=repositories">See all work</a>
+  </section>
+
+  <main class="how" id="how">
+    <p class="lead">I'm a hands-on learner who loves turning ideas into small, useful things on the web.</p>
+
+    <figure>
+      <svg class="doodle" viewBox="0 0 300 160" aria-hidden="true">
+        <path d="M40 120 L80 50 L120 120 Z" />
+        <path d="M150 40 l40 0 l0 40 l-40 0 Z" class="fill" />
+        <circle cx="240" cy="90" r="28" />
+        <path d="M30 140 C 110 150, 190 130, 280 142" class="soft" />
+      </svg>
+    </figure>
+    <p>I <strong>build to learn</strong>. Every project starts with a question I want to answer, and ends with something people can click.</p>
+
+    <figure>
+      <svg class="doodle" viewBox="0 0 300 160" aria-hidden="true">
+        <rect x="40" y="30" width="90" height="100" rx="8" />
+        <line x1="55" y1="55" x2="115" y2="55" /><line x1="55" y1="75" x2="105" y2="75" /><line x1="55" y1="95" x2="110" y2="95" />
+        <path d="M160 80 L250 80 M230 60 L250 80 L230 100" class="accent" />
+      </svg>
+    </figure>
+    <p>I like to <strong>make studying easier</strong>: quizzes, flashcards, and practice tools that turn review into something you actually want to do.</p>
+
+    <figure>
+      <svg class="doodle" viewBox="0 0 300 160" aria-hidden="true">
+        <circle cx="90" cy="80" r="22" class="fill" /><circle cx="160" cy="50" r="16" /><circle cx="210" cy="105" r="18" /><circle cx="240" cy="45" r="10" class="fill" />
+        <line x1="110" y1="72" x2="145" y2="56" /><line x1="110" y1="90" x2="193" y2="102" /><line x1="174" y1="56" x2="231" y2="47" />
+      </svg>
+    </figure>
+    <p>I enjoy <strong>connecting people</strong> through simple tools, like live voting apps that let a whole room share an opinion at once.</p>
+
+    <figure>
+      <svg class="doodle" viewBox="0 0 300 160" aria-hidden="true">
+        <path d="M60 120 Q 90 30 150 80 T 250 50" />
+        <circle cx="250" cy="50" r="7" class="fill" />
+        <path d="M50 130 l10 -10 l10 10" class="accent" />
+      </svg>
+    </figure>
+    <p>I'm always <strong>picking up something new</strong>, whether that's a framework, a database, or a better way to explain an idea.</p>
+
+    <section class="about" id="about">
+      <h2>More about me</h2>
+      <p>Write a few sentences here about where you study, what you're focused on right now, and what kind of projects or opportunities you're looking for.</p>
+      <p>When I'm not coding, you can find me … (add your hobbies here).</p>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Find me on <a href="https://github.com/Wei-ctrl">GitHub</a>.</p>
+    <section class="more" id="contact">
+      <h2>You might want to:</h2>
+      <ul>
+        <li><a href="#work">Check out some of my work</a></li>
+        <li><a href="https://github.com/Wei-ctrl">Visit my GitHub profile</a></li>
+        <li><a href="mailto:weiphyoeaung.2021@gmail.com">Send me an email</a></li>
+      </ul>
     </section>
   </main>
 
